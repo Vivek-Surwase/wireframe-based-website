@@ -1,0 +1,249 @@
+body{
+  background-image:
+      linear-gradient(90deg,#3a3d46 2px,#3a3d4600 2px),
+      linear-gradient(#3a3d46 2px,#2e3138 2px);
+}
+
+/* App.js Styles*/
+
+.contentArea{
+  display: flex;
+  margin-top: 2rem;;
+}
+
+#bot
+{
+  height:100px;
+  width :80px;
+  background-color:green;
+  color:white;
+  position: absolute;
+  left:570px;
+  top:100px;
+}
+/* Virtual Assistant Button */
+
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=checkbox]{
+  font-size: 1rem;
+  position: relative;
+  top: .3rem;
+  left: .2rem;
+}
+
+input[type=checkbox] {
+  --off: #c7cad1;
+  --mid: #829ad6;
+  --on: #255ff4;
+  --transDur: 0.5s;
+  --timing: cubic-bezier(0.6,0,0.4,1);
+  animation: bgOff var(--transDur) var(--timing);
+  background-color: var(--off);
+  border-radius: 0.67em / 0.5em;
+  box-shadow:
+    0 0.05em 0.1em #00000007 inset,
+    0 -0.25em 0.25em #0001 inset,
+    0 -0.5em 0 #0001 inset,
+    0 0.1em 0.1em #0001;
+  cursor: pointer;
+  position: relative;
+  width: 2.25em;
+  height: 1.5em;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+input[type=checkbox]:before {
+  animation: handleOff var(--transDur) var(--timing);
+  background-attachment: fixed;
+  background-position: 50% calc(50% - 0.1875em);
+  border-radius: 0.5em / 0.375em;
+  box-shadow:
+    0 0.175em 0.175em 0 #0001 inset,
+    0 0.375em 0 #0002 inset,
+    0 0.375em 0 var(--off) inset,
+    0 0.475em 0.1em #0001 inset;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.125em;
+  left: 0.125em;
+  width: 1em;
+  height: 0.75em;
+}
+input[type=checkbox]:checked {
+  animation: bgOn var(--transDur) var(--timing) forwards;
+}
+input[type=checkbox]:checked:before {
+  animation: handleOn var(--transDur) var(--timing) forwards;
+}
+input[type=checkbox]:focus {
+  outline: none;
+}
+input[type=checkbox].pristine, input[type=checkbox].pristine:before {
+  animation: none;
+}
+
+/* Animations */
+@keyframes bgOff {
+  from {
+    background-color: var(--on);
+  }
+  50% {
+    background-color: var(--mid);
+  }
+  to {
+    background-color: var(--off);
+  }
+}
+@keyframes bgOn {
+  from {
+    background-color: var(--off);
+  }
+  50% {
+    background-color: var(--mid);
+  }
+  to {
+    background-color: var(--on);
+  }
+}
+@keyframes handleOff {
+  from {
+    box-shadow:
+      0 0.175em 0.175em 0 #0001 inset,
+      0 0.375em 0 #0002 inset,
+      0 0.375em 0 var(--on) inset,
+      0 0.475em 0.1em #0001 inset;
+    left: 1.125em;
+    width: 1em;
+  }
+  50% {
+    box-shadow:
+      0 0.175em 0.175em 0 #0001 inset,
+      0 0.375em 0 #0002 inset,
+      0 0.375em 0 var(--mid) inset,
+      0 0.475em 0.1em #0001 inset;
+    left: 0.125em;
+    width: 2em;
+  }
+  to {
+    box-shadow:
+      0 0.175em 0.175em 0 #0001 inset,
+      0 0.375em 0 #0002 inset,
+      0 0.375em 0 var(--off) inset,
+      0 0.475em 0.1em #0001 inset;
+    left: 0.125em;
+    width: 1em;
+  }
+}
+@keyframes handleOn {
+  from {
+    box-shadow:
+      0 0.175em 0.175em 0 #0001 inset,
+      0 0.375em 0 #0002 inset,
+      0 0.375em 0 var(--off) inset,
+      0 0.475em 0.1em #0001 inset;
+    left: 0.125em;
+    width: 1em;
+  }
+  50% {
+    box-shadow:
+      0 0.175em 0.175em 0 #0001 inset,
+      0 0.375em 0 #0002 inset,
+      0 0.375em 0 var(--mid) inset,
+      0 0.475em 0.1em #0001 inset;
+    left: 0.125em;
+    width: 2em;
+  }
+  to {
+    box-shadow:
+      0 0.175em 0.175em 0 #0001 inset,
+      0 0.375em 0 #0002 inset,
+      0 0.375em 0 var(--on) inset,
+      0 0.475em 0.1em #0001 inset;
+    left: 1.125em;
+    width: 1em;
+  }
+}
+
+/* NavBar Styles*/
+
+.navigationBar{
+  display: flex;
+  box-shadow: 0 0 2px rgba(0,0,0,1);
+}
+
+.brandLogo{
+  font-size: 2rem;
+  padding: .8rem;
+  position: relative;
+  left: 3px;
+  top: 6px;
+  color: #fff;
+}
+
+.brandName{
+  display: inline-block;
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+.searchBar{
+  padding: .8rem 2.5rem 0 3.5rem;
+}
+
+#navBarSearchForm input[type=search]{
+  width:27rem !important;
+}
+
+.navBarLinks{
+  padding-left: 0;
+}
+
+.navBarList{
+  display: flex;
+  list-style: none;
+  margin-top: 1rem;
+  
+}
+
+.navItems a{
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: 'Ubuntu', sans-serif;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 1.3rem;
+  color: #fff;
+}
+
+/*Product-Card Styles*/
+.cardImage{
+  width: 8rem;
+  height: 11rem;
+  margin: 20px 20px;
+  transition: 0.3s;
+}
+
+.cardImage:hover{
+  transform: scale(1.1);
+}
+
+.card{
+  background-color: aqua;
+  margin: 1.5rem 1rem;
+}
+
+/*SideBar Styles*/
+
