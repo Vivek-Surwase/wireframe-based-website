@@ -10,7 +10,9 @@ const App = () => {
     let element = e.target.currentStyle || getComputedStyle(e.target);
     console.log(e.target.getBoundingClientRect());
     let pointer = document.getElementById("bot");
-    pointer.style.marginTop = e.target.getBoundingClientRect().height - 100 + window.scrollY + "px";
+    // pointer.style.marginTop = e.target.getBoundingClientRect().y;
+
+    pointer.style.top = e.target.getBoundingClientRect().height - 100 + window.scrollY + "px";
     pointer.style.backgroundColor = "red";
     pointer.style.transition = "all 2s"
   }
@@ -23,8 +25,7 @@ const App = () => {
         <div className="two col-lg-12">
           <ProductCard cardClicked = {cardClicked}></ProductCard>
           <div id="bot" onClick = {cardClicked}>
-            {/* <TiredAnimation/> */}
-
+            Bot
           </div>
           {/* <div className="assistant">
             <ReactLogo></ReactLogo>
